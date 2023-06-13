@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+#dark-mode-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #4d4d4d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#pdf-container {
+  width: 70%;
+  border: 1px solid #ccc;
+}
+
+#sidebar {
+  width: 25%;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+#checklist-container {
+  margin-bottom: 20px;
+}
+
+#checklist-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#timer,
+#calculator {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #dark-mode-button {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-mode #pdf-container,
+.dark-mode #sidebar,
+.dark-mode #timer,
+.dark-mode #calculator {
+  border-color: #777;
+  background-color: #444;
+}
+
+.dark-mode h2 {
+  color: #fff;
+}
+
+.dark-mode input,
+.dark-mode button {
+  background-color: #666;
+  color: #fff;
+  border-color: #999;
+}
+
+.dark-mode #checklist-items li {
+  color: #fff;
+}
+

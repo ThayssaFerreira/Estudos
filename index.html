@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>Leitor de PDF</title>
+</head>
+<body>
+  <div id="top-container">
+    <h1>Leitura de PDF</h1>
+    <div>
+      <button id="dark-mode-button">Dark Mode</button>
+      <label for="file-input"></label>
+      <input type="file" id="file-input" accept=".pdf">
+    </div>
+    <div id="clock"></div>
+  </div>
+
+  <div class="container">
+    <div id="pdf-container"></div>
+    <div id="sidebar">
+      <div id="checklist-container">
+        <h2>Checklist</h2>
+        <input type="text" id="checklist-input">
+        <button id="add-item-button">Adicionar</button>
+        <ul id="checklist-items"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="timer" class="hidden">
+      <h2>Cronômetro</h2>
+      <div id="timer-display">00:00:00</div>
+      <div>
+        <button id="start-timer-button">Iniciar</button>
+        <button id="stop-timer-button">Parar</button>
+        <button id="reset-timer-button">Reiniciar</button>
+      </div>
+    </div>
+    <button id="toggle-timer-button">Cronômetro</button>
+  </div>
+
+  <div class="container">
+    <div id="calculator" class="hidden">
+      <h2>Calculadora</h2>
+      <input type="text" id="calc-input" readonly>
+      <div id="calc-buttons">
+        <div>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button>/</button>
+        </div>
+        <div>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>*</button>
+        </div>
+        <div>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>+</button>
+        </div>
+        <div>
+          <button>0</button>
+          <button>.</button>
+          <button>=</button>
+          <button>-</button>
+        </div>
+        <div>
+          <button>C</button>
+        </div>
+      </div>
+    </div>
+    <button id="toggle-calculator-button">Calculadora</button>
+  </div>
+
+  <footer>
+    <p>Designer and code by <strong>Thayssa Ferreira</strong></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+  </html>
+                                               
