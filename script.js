@@ -51,6 +51,7 @@ function updateTimerDisplay() {
   timerDisplay.textContent = `${hours}:${minutes}:${seconds}`;
 }
 
+
 // Função para adicionar um item à checklist
 function addItem() {
   const input = document.getElementById('checklist-input');
@@ -59,10 +60,20 @@ function addItem() {
   if (itemText !== '') {
     const item = document.createElement('li');
     item.textContent = itemText;
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Remover';
+    deleteButton.addEventListener('click', function () {
+      item.remove();
+    });
+
+    item.appendChild(deleteButton);
     document.getElementById('checklist-items').appendChild(item);
     input.value = '';
   }
 }
+
+
 
 // Função para alternar a visibilidade do cronômetro
 function toggleTimer() {
