@@ -48,26 +48,25 @@ body {
 
 #checklist-items {
   list-style-type: none;
-  padding: 0;
+  padding: 5px;
 }
+
 
 #timer,
 #calculator {
-  padding: 10px;
+  padding:5px;
   border: 1px solid #ccc;
+  display:block;
+width:100%;
+
 }
 
 #calc-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
-}
 
-footer {
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #f2f2f2;
+  
 }
 
 .dark-mode {
@@ -87,7 +86,8 @@ footer {
   border-color: #777;
   background-color: #444;
 }
-
+.dark-mode #top-container{background: black;
+                          color:white;}
 .dark-mode h2 {
   color: #fff;
 }
