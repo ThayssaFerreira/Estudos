@@ -141,7 +141,7 @@ function startTimer() {
       elapsedTime = now - startTime;
       const formattedTime = formatTime(elapsedTime);
       timerDisplay.textContent = formattedTime;
-    }, 10);
+    }, 1000);
   }
 }
 
@@ -157,17 +157,16 @@ function stopTimer() {
 function resetTimer() {
   stopTimer();
   elapsedTime = 0;
-  timerDisplay.textContent = '00:00:00.000';
+  timerDisplay.textContent = '00:00:00';
 }
 
-// Formata o tempo em horas:minutos:segundos.milissegundos
+// Formata o tempo em horas:minutos:segundos
 function formatTime(time) {
   const hours = Math.floor(time / 3600000);
   const minutes = Math.floor((time % 3600000) / 60000);
   const seconds = Math.floor((time % 60000) / 1000);
-  const milliseconds = time % 1000;
 
-  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(3, '0')}`;
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
 // Adiciona um número ou operador ao campo de entrada da calculadora
@@ -181,7 +180,7 @@ function calculate() {
     const result = eval(calcInput.value);
     calcInput.value = result;
   } catch (error) {
-    calcInput.value = 'Error';
+    calcInput.value = 'Erro';
   }
 }
 
@@ -198,4 +197,12 @@ calcButtonsList.forEach(function(button) {
     addToCalcInput(value);
   });
 });
-  
+
+// Eventos do checklist
+addItemButton.addEventListener('click', addItem);
+
+// Eventos do cronômetro
+startTimerButton.addEventListener('click', startTimer);
+stopTimerButton.addEventListener('click', stopTimer);
+resetTimerButton.addEventListener('click', resetTimer);
+
